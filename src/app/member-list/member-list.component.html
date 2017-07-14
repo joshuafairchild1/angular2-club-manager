@@ -2,5 +2,14 @@
 <hr>
 <h2>Members:</h2>
 <div class="member-card panel panel-default" *ngFor='let member of members | async'>
-  <h3 class='panel-body' routerLink='/members/{{member.$key}}'><a>Name: {{member.name}}</a></h3>
+  <div class="panel-body">
+    <h3 routerLink='/members/{{member.$key}}'><a>Name: {{member.name}}</a></h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <button *ngIf='editingMember != member' type="button" class="btn" (click)='startEditing(member)'>Edit</button>
+      <div *ngIf='editingMember === member'>
+        <app-edit-member [selectedMember]="member"
+                         (endEditSender)='endEditing()'></app-edit-member>
+      </div>
+    </div>
+  </div>
 </div>

@@ -27,4 +27,12 @@ export class ClubService {
     this.members.push(newMember);
   }
 
+  updateMember(member: any): void {
+    this.database.object(`members/${member.$key}`).update({ name: member.name,
+                                                            age: member.age,
+                                                            role: member.role,
+                                                            image: member.image
+                                                          });
+  }
+
 }

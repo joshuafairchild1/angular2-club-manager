@@ -1,0 +1,20 @@
+<div>
+  <p class="text-center">Age {{selectedMember.age}}, {{selectedMember.role}}</p>
+</div>
+<div class="form-group">
+  <label>Name:</label>
+  <input type="text" class="form-control" [(ngModel)]='selectedMember.name'>
+</div>
+<div class="form-group">
+  <label>Age:</label>
+  <input type="number" class='form-control' [(ngModel)]='selectedMember.age'>
+</div>
+<div class="form-group">
+  <label>Role:</label>
+  <input type="text" class="form-control" [(ngModel)]='selectedMember.role'>
+</div>
+<div class="form-group">
+  <label>Profile image (URL):</label>
+  <input type="url" class='form-control' [(ngModel)]='selectedMember.image'>
+</div>
+<button type="button" class="btn btn-primary" (click)='stopEditing(selectedMember)'>Save changes</button>
