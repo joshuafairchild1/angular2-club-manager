@@ -20,7 +20,7 @@ Description coming soon
 
 * Clone this repository
 
-  `$ git clone https://github.com/joshuafairchild1/angular2-club-manager`
+  `$ git clone https://github.com/joshuafairchild1/angular2-member`
 
 
 * Run the following commands from the root directory:

@@ -4,18 +4,23 @@ import { MemberListComponent } from './member-list/member-list.component';
 import { AboutComponent } from './about/about.component';
 import { MemberProfileComponent } from './member-profile/member-profile.component';
 import { AdminComponent } from './admin/admin.component';
+import { ClubListComponent } from './club-list/club-list.component';
 
 const appRoutes: Routes = [
   {
     path: '',
+    component: ClubListComponent
+  },
+  {
+    path: 'clubs/:clubId',
     component: MemberListComponent
   },
   {
-    path: 'about',
+    path: 'clubs/:clubId/about',
     component: AboutComponent
   },
   {
-    path: 'members/:id',
+    path: 'clubs/:clubId/members/:memberId',
     component: MemberProfileComponent
   },
   {

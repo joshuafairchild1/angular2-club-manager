@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ClubManagerService } from './club-manager.service';
+import { ClubManagerService } from './member.service';
 
 describe('ClubManagerService', () => {
   beforeEach(() => {

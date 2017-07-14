@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseObjectObservable } from 'angularfire2/database';
-import { ClubService } from './../club-manager.service';
+import { MemberService } from './../member.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Member } from './../member.model';
@@ -10,7 +10,7 @@ import { Member } from './../member.model';
   selector: 'app-member-profile',
   templateUrl: './member-profile.component.html',
   styleUrls: ['./member-profile.component.css'],
-  providers: [ClubService]
+  providers: [MemberService]
 })
 export class MemberProfileComponent implements OnInit {
   memberId: string;
@@ -18,15 +18,15 @@ export class MemberProfileComponent implements OnInit {
   localMember: Member;
 
   constructor(
-    private clubService: ClubService,
+    private memberService: MemberService,
     private route: ActivatedRoute,
     private location: Location,
   ) { }
 
   ngOnInit(): void {
     this.route.params.forEach(param => {
-      this.memberId = param['id'];
-      this.memberObservable = this.clubService.getMemberById(this.memberId);
+      this.memberId = param['memberId'];
+      this.memberObservable = this.memberService.getMemberById(this.memberId);
 
       this.memberObservable.subscribe(data => {
         this.localMember = new Member(data.name, data.age, data.role, data.image);

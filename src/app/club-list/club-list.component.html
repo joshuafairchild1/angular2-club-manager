@@ -1,0 +1,4 @@
+<h1 class="text-center">All Clubs</h1>
+<div class="well" *ngFor='let club of clubs | async'>
+  <h1 routerLink='/clubs/{{club.$key}}'><a>{{club.title}}</a></h1>
+</div>

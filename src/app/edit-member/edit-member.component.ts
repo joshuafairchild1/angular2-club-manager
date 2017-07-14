@@ -1,18 +1,19 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Member } from './../member.model';
-import { ClubService } from './../club-manager.service';
+import { MemberService } from './../member.service';
 
 @Component({
   selector: 'app-edit-member',
   templateUrl: './edit-member.component.html',
-  styleUrls: ['./edit-member.component.css']
+  styleUrls: ['./edit-member.component.css'],
+  providers: [MemberService]
 })
 export class EditMemberComponent implements OnInit {
   @Input() selectedMember: any;
   @Output() endEditSender = new EventEmitter();
 
   constructor(
-    private clubService: ClubService,
+    private memberService: MemberService,
   ) { }
 
   ngOnInit(): void {
@@ -20,10 +21,10 @@ export class EditMemberComponent implements OnInit {
 
   stopEditing(member: any): void {
     this.endEditSender.emit();
-    this.clubService.updateMember(member);
+    this.memberService.updateMember(member);
   }
 
   deleteSelectedMember(member: any): void {
-    this.clubService.deleteMember(member);
+    this.memberService.deleteMember(member);
   }
 }

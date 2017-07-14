@@ -14,6 +14,9 @@ import { AdminComponent } from './admin/admin.component';
 import { masterFirebaseConfig } from './api-keys';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { NamePipe } from './name.pipe';
+import { ClubListComponent } from './club-list/club-list.component';
+import { ClubService } from './club.service';
+import { MemberService } from './member.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +33,8 @@ export const firebaseConfig = {
     AboutComponent,
     AdminComponent,
     EditMemberComponent,
-    NamePipe
+    NamePipe,
+    ClubListComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [ClubService, MemberService],
   bootstrap: [AppComponent]
 })
 
