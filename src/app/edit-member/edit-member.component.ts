@@ -22,4 +22,8 @@ export class EditMemberComponent implements OnInit {
     this.endEditSender.emit();
     this.clubService.updateMember(member);
   }
+
+  deleteSelectedMember(member: any): void {
+    this.clubService.deleteMember(member);
+  }
 }

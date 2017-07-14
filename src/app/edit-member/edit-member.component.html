@@ -17,4 +17,5 @@
   <label>Profile image (URL):</label>
   <input type="url" class='form-control' [(ngModel)]='selectedMember.image'>
 </div>
-<button type="button" class="btn btn-primary" (click)='stopEditing(selectedMember)'>Save changes</button>
+<button type="button" class="btn btn-primary btn-block" (click)='stopEditing(selectedMember)'>Save Changes</button>
+<button type="button" class="btn btn-danger btn-block" (click)='deleteSelectedMember(selectedMember)'>Delete Member</button>

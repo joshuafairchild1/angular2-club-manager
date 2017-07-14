@@ -35,4 +35,7 @@ export class ClubService {
                                                           });
   }
 
+  deleteMember(member: any): void {
+    this.database.object(`members/${member.$key}`).remove();
+  }
 }
