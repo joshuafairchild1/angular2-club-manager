@@ -15,7 +15,11 @@ export class ClubService {
   }
 
   getMembers(): FirebaseListObservable<any[]> {
-   return this.members;
- }
+    return this.members;
+  }
+
+  getMemberById(memberId: string): FirebaseObjectObservable<any> {
+    return this.database.object(`members/${memberId}`);
+  }
 
 }
