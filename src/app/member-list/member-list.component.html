@@ -2,7 +2,7 @@
 
 <h2>Members:</h2>
 <div class="member-card well" *ngFor='let member of members | async'>
-  <h3>Name: {{member.name}}</h3>
+  <h3 routerLink='/members/{{member.$key}}'><a>Name: {{member.name}}</a></h3>
   <h4>Age: {{member.age}}</h4>
   <h4>Role: {{member.role}}</h4>
   <img class='member-photo' src="{{member.image}}">
