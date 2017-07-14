@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.member-photo {
+  height: 50%;
+  width: 50%;
+}
+
+.member-card {
+  width: 50%;
+}

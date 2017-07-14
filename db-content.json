@@ -1,0 +1,16 @@
+{
+  "members": {
+    "0": {
+      "name": "Tom French",
+      "age": 32,
+      "role": "President",
+      "image": "https://tstmasterassets.s3.amazonaws.com/assets/redesign/people/stock/person-2-24923d4cee72cf21a0b661ba3921b99c.jpg"
+    },
+    "1": {
+      "name": "Iris Roberts",
+      "age": 32,
+      "role": "Meeting planner",
+      "image": "https://static.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg"
+    }
+  }
+}

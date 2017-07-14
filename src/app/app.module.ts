@@ -7,7 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
-import { ClubComponent } from './club/club.component';
+import { MemberListComponent } from './member-list/member-list.component';
 import { MemberProfileComponent } from './member-profile/member-profile.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
@@ -23,7 +23,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    ClubComponent,
+    MemberListComponent,
     MemberProfileComponent,
     AboutComponent,
     AdminComponent

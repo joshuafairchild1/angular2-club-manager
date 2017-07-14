@@ -1,8 +1,21 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Injectable()
-export class ClubManagerService {
+export class ClubService {
+  members: FirebaseListObservable<any[]>;
 
-  constructor() { }
+  constructor(
+    private database: AngularFireDatabase,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    this.members = database.list(`members`);
+  }
+
+  getMembers(): FirebaseListObservable<any[]> {
+   return this.members;
+ }
 
 }
