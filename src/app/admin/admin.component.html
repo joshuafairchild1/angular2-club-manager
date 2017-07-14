@@ -1,3 +1,25 @@
-<p>
-  admin works!
-</p>
+<h1 class="admin-msg text-center">Logged in as admin</h1>
+
+<div>
+  <app-member-list></app-member-list>
+</div>
+
+<h3>Add a new member</h3>
+<hr>
+<div class="form-group">
+  <label>Name:</label>
+  <input type="text" class="form-control" #name>
+</div>
+<div class="form-group">
+  <label>Age:</label>
+  <input type="number" class='form-control' #age>
+</div>
+<div class="form-group">
+  <label>Role:</label>
+  <input type="text" class="form-control" #role>
+</div>
+<div class="form-group">
+  <label>Profile image (URL):</label>
+  <input type="url" class='form-control' #imgUrl>
+</div>
+<button type="button" class="btn btn-primary" (click)='memberAdded(name.value, age.value, role.value, imgUrl.value); name.value=""; age.value=""; role.value=""; imgUrl.value=""'>Add member</button>

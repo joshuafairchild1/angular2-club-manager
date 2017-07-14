@@ -3,19 +3,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { MemberListComponent } from './member-list/member-list.component';
 import { AboutComponent } from './about/about.component';
 import { MemberProfileComponent } from './member-profile/member-profile.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
-    path: "",
+    path: '',
     component: MemberListComponent
   },
   {
-    path: "about",
+    path: 'about',
     component: AboutComponent
   },
   {
-    path: "members/:id",
+    path: 'members/:id',
     component: MemberProfileComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 
