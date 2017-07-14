@@ -15,6 +15,7 @@ export class MemberListComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   editingMember: Member = null;
+  nameFilter: string;
 
   constructor(
     private clubService: ClubService,

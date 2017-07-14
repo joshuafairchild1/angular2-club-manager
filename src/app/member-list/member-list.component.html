@@ -1,7 +1,13 @@
 <h1 class="text-center">The Best Book Club in the World</h1>
 <hr>
 <h2>Members:</h2>
-<div class="member-card panel panel-default" *ngFor='let member of members | async'>
+<div class="input-group form-group">
+  <input type="text" class='form-control' [(ngModel)]='nameFilter' placeholder="Look up users by name">
+  <span class="input-group-btn">
+    <button type="button" class="btn">Search</button>
+  </span>
+</div>
+<div class="member-card panel panel-default" *ngFor='let member of members | async | name:nameFilter'>
   <div class="panel-body">
     <h3 routerLink='/members/{{member.$key}}'><a>Name: {{member.name}}</a></h3>
     <div *ngIf="currentRoute === '/admin'">
