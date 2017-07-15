@@ -21,7 +21,7 @@
   <div class="input-group form-group">
     <input type="text" class='form-control' [(ngModel)]='nameFilter' placeholder="Look up users by name">
     <span class="input-group-btn">
-      <button type="button" class="btn">Search</button>
+      <button type="button" class="btn btn-primary">Search</button>
     </span>
   </div>
   <div class="member-card panel panel-default" *ngFor='let member of members | name:nameFilter'>

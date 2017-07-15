@@ -53,6 +53,7 @@ export class MemberListComponent implements OnInit {
     this.clubService.getClubById(this.clubId).subscribe(data => {
       this.club = data;
     });
+
   }
 
   startEditing(memberToEdit: Member): void {
@@ -60,6 +61,8 @@ export class MemberListComponent implements OnInit {
   }
 
   endEditing(): void {
+    const index = this.members.indexOf(this.editingMember);
+    this.members.splice(index, 1);
     this.editingMember = null;
   }
 
