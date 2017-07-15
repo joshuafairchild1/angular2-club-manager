@@ -10,6 +10,8 @@ This is a website that allows a user to save details regarding clubs and the peo
 
 This application was created primarily using Angular 2, Firebase and the AngularFire2 library.
 
+Deployed site can be viewed at: https://angular2-club-manager.firebaseapp.com/
+
 ## Installation Requirements
 
 * You must install or have installed a current version of:
