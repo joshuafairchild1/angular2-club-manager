@@ -26,7 +26,7 @@
   </div>
   <div class="member-card panel panel-default" *ngFor='let member of members | name:nameFilter'>
     <div class="panel-body">
-      <h3 routerLink='/clubs/{{clubId}}/members/{{member.$key}}'><a>Name: {{member.name}}</a></h3>
+      <h3 routerLink='/clubs/{{clubId}}/members/{{member.$key}}'>Name: <a>{{member.name}}</a></h3>
       <div *ngIf="currentRoute.includes('admin')">
         <button *ngIf='editingMember != member' type="button" class="btn btn-block" (click)='startEditing(member)'>Edit</button>
         <div *ngIf='editingMember === member'>

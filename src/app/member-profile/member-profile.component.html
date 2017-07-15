@@ -17,7 +17,8 @@
 <div class="container">
   <h3 routerLink='/clubs/{{clubId}}'><a>Back to {{localClub?.title}}</a></h3>
   <div class="well">
-    <h3>Name: {{localMember?.name}}</h3>
+    <h3>{{localMember?.name}}</h3>
+    <h4>{{localClub?.title}}</h4>
     <h4>Age: {{localMember?.age}}</h4>
     <h4>Role: {{localMember?.role}}</h4>
     <hr>

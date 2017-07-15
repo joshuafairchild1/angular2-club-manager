@@ -16,9 +16,9 @@
 
 <h1 class="text-center">{{localClub?.title}}</h1>
 <hr>
-<div class="container text-center">
+<div class="container">
+  <h3 routerLink='/clubs/{{localClub?.$key}}'><a>Back to {{localClub?.title}}</a></h3>
   <h4 class="well">
     {{localClub?.about}}
   </h4>
-  <button class="btn btn-primary" routerLink='/clubs/{{localClub?.$key}}'>Back to {{localClub?.title}}</button>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Member } from './../member.model';
 import { MemberService } from './../member.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-edit-member',
@@ -11,12 +12,17 @@ import { MemberService } from './../member.service';
 export class EditMemberComponent implements OnInit {
   @Input() selectedMember: any;
   @Output() endEditSender = new EventEmitter();
+  clubId: string;
 
   constructor(
     private memberService: MemberService,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
+    this.route.params.forEach(param => {
+      this.clubId = param['clubId'];
+    });
   }
 
   stopEditing(member: any): void {
@@ -25,6 +31,6 @@ export class EditMemberComponent implements OnInit {
   }
 
   deleteSelectedMember(member: any): void {
-    this.memberService.deleteMember(member);
+    this.memberService.deleteMember(member, this.clubId);
   }
 }

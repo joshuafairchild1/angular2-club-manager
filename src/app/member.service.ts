@@ -29,8 +29,9 @@ export class MemberService {
     return this.database.object(`members/${memberId}`);
   }
 
-  addMember(newMember: Member): void {
-    this.members.push(newMember);
+  addMember(newMember: Member, clubId: string): void {
+    const newMemberKey = this.members.push(newMember).key;
+    this.database.object(`clubs/${clubId}/members`).update({[newMemberKey]: true});
   }
 
   updateMember(member: any): void {
@@ -41,7 +42,8 @@ export class MemberService {
                                                           });
   }
 
-  deleteMember(member: any): void {
+  deleteMember(member: any, clubId: string): void {
     this.database.object(`members/${member.$key}`).remove();
+    this.database.object(`clubs/${clubId}/members/${member.$key}`).remove();
   }
 }

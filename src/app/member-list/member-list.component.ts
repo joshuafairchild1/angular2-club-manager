@@ -40,6 +40,7 @@ export class MemberListComponent implements OnInit {
     this.memberKeys = this.memberService.getClubMemberKeys(this.clubId);
 
     this.memberKeys.subscribe(data => {
+      this.members = [];
       data.forEach(key => {
         this.memberService.getMemberById(key.$key).subscribe(member => {
           this.members.push(member);
