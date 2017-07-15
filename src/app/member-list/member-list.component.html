@@ -17,12 +17,15 @@
 <div class="container">
   <h1 class="text-center">{{club?.title}}</h1>
   <hr>
-  <h2>Members:</h2>
-  <div class="input-group form-group">
+  <!-- <h2>Members:</h2> -->
+  <div class="input-group form-group searchbar">
     <input type="text" class='form-control' [(ngModel)]='nameFilter' placeholder="Look up users by name">
     <span class="input-group-btn">
       <button type="button" class="btn btn-primary">Search</button>
     </span>
+  </div>
+  <div class='text-center'>
+    <h2>Users</h2>
   </div>
   <div class="member-card panel panel-default" *ngFor='let member of members | name:nameFilter'>
     <div class="panel-body">

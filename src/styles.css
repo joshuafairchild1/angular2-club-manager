@@ -13,3 +13,8 @@
 .admin-msg {
   color: #87cefa;
 }
+
+.searchbar, .member-card {
+  width: 50%;
+  margin: 0 auto;
+}
