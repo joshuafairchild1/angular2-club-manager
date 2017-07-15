@@ -1,20 +1,38 @@
-<h1 class="text-center">{{club?.title}}</h1>
-<hr>
-<h2>Members:</h2>
-<div class="input-group form-group">
-  <input type="text" class='form-control' [(ngModel)]='nameFilter' placeholder="Look up users by name">
-  <span class="input-group-btn">
-    <button type="button" class="btn">Search</button>
-  </span>
-</div>
-<div class="member-card panel panel-default" *ngFor='let member of members | name:nameFilter'>
-  <div class="panel-body">
-    <h3 routerLink='/clubs/{{clubId}}/members/{{member.$key}}'><a>Name: {{member.name}}</a></h3>
-    <div *ngIf="currentRoute === '/admin'">
-      <button *ngIf='editingMember != member' type="button" class="btn btn-block" (click)='startEditing(member)'>Edit</button>
-      <div *ngIf='editingMember === member'>
-        <app-edit-member [selectedMember]="member"
-                         (endEditSender)='endEditing()'></app-edit-member>
+<nav class="navbar navbar-default" *ngIf='!currentRoute.includes("admin")'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">All clubs</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a routerLink='/clubs/{{clubId}}/about'>About</a>
+      </li>
+      <li>
+        <a routerLink='/clubs/{{clubId}}/admin'>Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1 class="text-center">{{club?.title}}</h1>
+  <hr>
+  <h2>Members:</h2>
+  <div class="input-group form-group">
+    <input type="text" class='form-control' [(ngModel)]='nameFilter' placeholder="Look up users by name">
+    <span class="input-group-btn">
+      <button type="button" class="btn">Search</button>
+    </span>
+  </div>
+  <div class="member-card panel panel-default" *ngFor='let member of members | name:nameFilter'>
+    <div class="panel-body">
+      <h3 routerLink='/clubs/{{clubId}}/members/{{member.$key}}'><a>Name: {{member.name}}</a></h3>
+      <div *ngIf="currentRoute.includes('admin')">
+        <button *ngIf='editingMember != member' type="button" class="btn btn-block" (click)='startEditing(member)'>Edit</button>
+        <div *ngIf='editingMember === member'>
+          <app-edit-member [selectedMember]="member"
+                           (endEditSender)='endEditing()'></app-edit-member>
+        </div>
       </div>
     </div>
   </div>

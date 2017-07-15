@@ -1,5 +1,24 @@
-<blockquote class="embedly-card">
-  <h4><a href="https://en.wikipedia.org/wiki/Book_discussion_club">Book discussion club - Wikipedia</a></h4>
-  <p>A book club is a group of people who meet to discuss a book or books that they have read and express their opinions, likes, dislikes, etc. It is more often called simply a book club, a term that is also used to describe a book sales club, which can cause confusion.</p>
-</blockquote>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">All clubs</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a routerLink='/clubs/{{clubId}}/about'>About</a>
+      </li>
+      <li>
+        <a routerLink='/clubs/{{clubId}}/admin'>Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="text-center">{{localClub?.title}}</h1>
+<hr>
+<div class="container text-center">
+  <h4 class="well">
+    {{localClub?.about}}
+  </h4>
+  <button class="btn btn-primary" routerLink='/clubs/{{localClub?.$key}}'>Back to {{localClub?.title}}</button>
+</div>

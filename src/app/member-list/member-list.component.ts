@@ -46,7 +46,6 @@ export class MemberListComponent implements OnInit {
         });
       });
     });
-    console.log(this.members)
   }
 
   ngDoCheck(): void {

@@ -1,25 +1,43 @@
-<h1 class="admin-msg text-center">Logged in as admin</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">All clubs</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a routerLink='/clubs/{{clubId}}/about'>About</a>
+      </li>
+      <li>
+        <a routerLink='/clubs/{{clubId}}/admin'>Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<div>
-  <app-member-list></app-member-list>
-</div>
+<div class="container">
+  <h1 class="admin-msg text-center">Logged in as admin</h1>
 
-<h3>Add a new member</h3>
-<hr>
-<div class="form-group">
-  <label>Name:</label>
-  <input type="text" class="form-control" #name>
+  <div>
+    <app-member-list></app-member-list>
+  </div>
+
+  <h3>Add a new member</h3>
+  <hr>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" class="form-control" #name>
+  </div>
+  <div class="form-group">
+    <label>Age:</label>
+    <input type="number" class='form-control' #age>
+  </div>
+  <div class="form-group">
+    <label>Role:</label>
+    <input type="text" class="form-control" #role>
+  </div>
+  <div class="form-group">
+    <label>Profile image (URL):</label>
+    <input type="url" class='form-control' #imgUrl>
+  </div>
+  <button type="button" class="btn btn-primary" (click)='memberAdded(name.value, age.value, role.value, imgUrl.value); name.value=""; age.value=""; role.value=""; imgUrl.value=""'>Add member</button>
 </div>
-<div class="form-group">
-  <label>Age:</label>
-  <input type="number" class='form-control' #age>
-</div>
-<div class="form-group">
-  <label>Role:</label>
-  <input type="text" class="form-control" #role>
-</div>
-<div class="form-group">
-  <label>Profile image (URL):</label>
-  <input type="url" class='form-control' #imgUrl>
-</div>
-<button type="button" class="btn btn-primary" (click)='memberAdded(name.value, age.value, role.value, imgUrl.value); name.value=""; age.value=""; role.value=""; imgUrl.value=""'>Add member</button>
