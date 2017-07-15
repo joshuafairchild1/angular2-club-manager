@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { MemberService } from './../member.service';
 import { ClubService } from './../club.service';
@@ -15,7 +15,7 @@ import { Club } from './../club.model';
   styleUrls: ['./member-list.component.css'],
   providers: [MemberService, ClubService]
 })
-export class MemberListComponent implements OnInit {
+export class MemberListComponent implements OnInit, DoCheck {
   memberKeys: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   clubId: string;

@@ -5,7 +5,7 @@ import { Club } from './club.model';
 
 @Injectable()
 export class ClubService {
-  clubs: FirebaseListObservable<any[]>
+  clubs: FirebaseListObservable<any[]>;
 
   constructor(
     private database: AngularFireDatabase,
