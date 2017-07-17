@@ -1,46 +1,78 @@
 {
-  "members": {
-    "mem1": {
-      "name": "Tom French",
-      "age": 32,
-      "role": "President",
-      "image": "https://tstmasterassets.s3.amazonaws.com/assets/redesign/people/stock/person-2-24923d4cee72cf21a0b661ba3921b99c.jpg"
+  "clubs" : {
+    "club1" : {
+      "about" : "A book club is a group of people who meet to discuss a book or books that they have read and express their opinions, likes, dislikes, etc. It is more often called simply a book club, a term that is also used to describe a book sales club, which can cause confusion.",
+      "members" : {
+        "-Kp2spjUS8NtNSEXXT_Z" : true,
+        "mem1" : true,
+        "mem2" : true
+      },
+      "title" : "Book Club"
     },
-    "mem2": {
-      "name": "Iris Roberts",
-      "age": 24,
-      "role": "Meeting Planner",
-      "image": "https://static.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg"
-    },
-    "mem3": {
-      "name": "Joe Shmo",
-      "age": 46,
-      "role": "Treasurer",
-      "image": "https://dontmakemeangrymrmcgee.files.wordpress.com/2015/07/fumio-demura.jpg"
-    },
-    "mem4": {
-      "name": "Jane Doe",
-      "age": 51,
-      "role": "Event Coordinator",
-      "image": "https://arc-anglerfish-arc2-prod-shropshirestar-mna.s3.amazonaws.com/public/HDEFKC5HVNGW5M4N4DXZPUBOZY"
+    "club2" : {
+      "about" : "Karate can also be described as a martial art, or fighting method, involving a variety of techniques, including blocks, strikes, evasions, throws, and joint manipulations. Karate practice is divided into three aspects: kihon (basics), kata (forms), and kumite (sparring).",
+      "members" : {
+        "-Kp2vv7Hq_CBCidaaMif" : true,
+        "mem3" : true,
+        "mem4" : true
+      },
+      "title" : "Karate Club"
     }
   },
-  "clubs": {
-    "club1": {
-      "title": "Book Club",
-      "about": "<blockquote class='embedly-card'><h4><a href='https://en.wikipedia.org/wiki/Book_discussion_club'>Book discussion club - Wikipedia</a></h4><p>A book club is a group of people who meet to discuss a book or books that they have read and express their opinions, likes, dislikes, etc. It is more often called simply a book club, a term that is also used to describe a book sales club, which can cause confusion.</p></blockquote><script async src='//cdn.embedly.com/widgets/platform.js' charset='UTF-8'></script>",
-      "members": {
-        "mem1": true,
-        "mem2": true
-      }
+  "members" : {
+    "-Kp2spjUS8NtNSEXXT_Z" : {
+      "age" : 5,
+      "clubs" : {
+        "club1" : true
+      },
+      "image" : "http://wallpapercave.com/wp/hUUIicN.jpg",
+      "name" : "Gary Laser Eyes",
+      "role" : "Everything"
     },
-    "club2": {
-      "title": "Karate Club",
-      "about": "<blockquote class='embedly-card'><h4><a href='https://en.wikipedia.org/wiki/Karate'>Karate - Wikipedia</a></h4><p>On September 28, 2015, karate was featured on a shortlist along with baseball, softball, skateboarding, surfing, and sport climbing to be considered for inclusion in the 2020 Summer Olympics. On June 1, 2016, the International Olympic Committee's executive board announced they were supporting the inclusion of all five sports (counting baseball and softball as only one sport) for inclusion in the 2020 Games.</p></blockquote><script async src='//cdn.embedly.com/widgets/platform.js' charset='UTF-8'></script>",
-      "members": {
-        "mem3": true,
-        "mem4": true
-      }
+    "-Kp2vv7Hq_CBCidaaMif" : {
+      "age" : 7,
+      "clubs" : {
+        "club2" : true
+      },
+      "image" : "https://www.softpaws.com/template/images/landing_page/july_cat_image.jpg",
+      "name" : "Ronnie Pumpkin",
+      "role" : "Sparring Captain"
+    },
+    "mem1" : {
+      "age" : 32,
+      "clubs" : {
+        "club1" : true
+      },
+      "image" : "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/mountain-lion-on-rock.adapt.945.1.jpg",
+      "name" : "Steve French",
+      "role" : "President"
+    },
+    "mem2" : {
+      "age" : 24,
+      "clubs" : {
+        "club1" : true
+      },
+      "image" : "https://static.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg",
+      "name" : "Iris Roberts",
+      "role" : "Meeting Planner"
+    },
+    "mem3" : {
+      "age" : 46,
+      "clubs" : {
+        "club2" : true
+      },
+      "image" : "https://dontmakemeangrymrmcgee.files.wordpress.com/2015/07/fumio-demura.jpg",
+      "name" : "Joe Shmo",
+      "role" : "Treasurer"
+    },
+    "mem4" : {
+      "age" : 50,
+      "clubs" : {
+        "club2" : true
+      },
+      "image" : "https://arc-anglerfish-arc2-prod-shropshirestar-mna.s3.amazonaws.com/public/HDEFKC5HVNGW5M4N4DXZPUBOZY",
+      "name" : "Jane Doe",
+      "role" : "Event Coordinator"
     }
   }
 }

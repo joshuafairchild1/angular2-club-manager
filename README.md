@@ -49,7 +49,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Known Bugs
 
-* None
+* Editing a member and saving the changes causes their details to render multiple times on the page.
 
 ## License
 

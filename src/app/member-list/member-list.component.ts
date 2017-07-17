@@ -61,8 +61,6 @@ export class MemberListComponent implements OnInit, DoCheck {
   }
 
   endEditing(): void {
-    const index = this.members.indexOf(this.editingMember);
-    this.members.splice(index, 1);
     this.editingMember = null;
   }
 
