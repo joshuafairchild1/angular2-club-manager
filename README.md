@@ -35,6 +35,28 @@ Deployed site can be viewed at: https://angular2-club-manager.firebaseapp.com/
 
   This will download the project's dependencies
 
+## Firebase configuration
+
+* Sign into the firebase console ([https://firebase.google.com/](https://firebase.google.com/)) and create a new project, then select "Add firebase to your web app". You will be presented with a modal window containing a few script tags, leave this information handy.
+
+* In the directory `src/app` create a file called `api-key.ts` and add the following code:
+
+  ```
+  export const masterFirebaseConfig = {
+    apiKey: "XXXX",
+    authDomain: "XXXX",
+    databaseURL: "XXXX",
+    projectId: "XXXX",
+    storageBucket: "XXXX",
+    messagingSenderId: "XXXX"
+  };
+
+  ```
+  * Note: for each property of the `masterFirebaseConfig` object, replace 'XXXX' with the information that firebase provided you in the previous step.
+
+
+* Database content has been provided in a file called `db-content.json`, this can be uploaded to firebase directly by going into your database in the firebase console and selecting 'Import JSON'
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
